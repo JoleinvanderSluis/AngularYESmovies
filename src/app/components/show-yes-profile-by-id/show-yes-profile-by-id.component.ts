@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from 'src/app/services/profile.service';
 import { YesProfile } from 'src/app/model/yes-profile';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-show-yes-profile-by-id',
@@ -11,11 +12,16 @@ export class ShowYesProfileByIdComponent implements OnInit {
 
   private yesProfile: YesProfile;
 
-  constructor(private profileService: ProfileService) { }
+  constructor(
+    private profileService: ProfileService,
+    private route: ActivatedRoute
+    ) {}
 
-  ngOnInit() {
-    this.profileService.findById(data.id).subscribe(data => {
-      this.yesProfile = data;
+  ngOnInit() : void {
+    const id = +this.route.snapshot.params["id"];
+
+    this.profileService.findById(id).subscribe( yesProfile => {
+      this.yesProfile = yesProfile;
     })
   }
 
