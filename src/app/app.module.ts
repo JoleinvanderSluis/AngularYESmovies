@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { YesMoviesComponent } from './yes-movies/yes-movies.component';
 import { YesProfileListComponent } from './components/yes-profile-list/yes-profile-list.component';
+import { ShowYesProfileByIdComponent } from './components/show-yes-profile-by-id/show-yes-profile-by-id.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     YesMoviesComponent,
-    YesProfileListComponent
+    YesProfileListComponent,
+    ShowYesProfileByIdComponent
   ],
   imports: [
     BrowserModule,

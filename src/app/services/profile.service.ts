@@ -14,4 +14,8 @@ export class ProfileService {
   
     return this.httpClient.get<YesProfile[]>('http://localhost:8080/api/yesProfiles');
   }
+
+  findById(id: Number): Observable<YesProfile> {
+    return this.httpClient.get<YesProfile>('http://localhost:8080/api/yesProfiles/${id}');
+  } 
 }
