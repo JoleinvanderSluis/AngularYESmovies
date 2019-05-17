@@ -11,7 +11,6 @@ export class ProfileService {
   constructor(private httpClient: HttpClient) { }
 
   list(): Observable<YesProfile[]> {
-  
     return this.httpClient.get<YesProfile[]>('http://localhost:8080/api/yesProfiles');
   }
 
