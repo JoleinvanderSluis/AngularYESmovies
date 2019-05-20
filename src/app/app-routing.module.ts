@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { YesProfileListComponent } from './components/yes-profile-list/yes-profile-list.component';
-import { ShowYesProfileByIdComponent } from './components/show-yes-profile-by-id/show-yes-profile-by-id.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieCreateComponent} from './movie-create/movie-create.component';
+import { MovieShowComponent } from './movie-show/movie-show.component';
 
 const routes: Routes = [
   {
-    path: 'yesProfilelist',
-    component: YesProfileListComponent
+    path: 'movies',
+    component: MoviesComponent
   },
   {
-    path: 'showYesProfileById/:id',
-    component: ShowYesProfileByIdComponent
+    path: 'movies/create',
+    component: MovieCreateComponent
+  },
+  {
+    path: '',
+    component: MoviesComponent
+  },
+  {
+    path: 'movies/:id',
+    component: MovieShowComponent
   }
 ];
 
