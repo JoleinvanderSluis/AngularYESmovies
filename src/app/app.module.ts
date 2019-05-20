@@ -6,8 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { YesMoviesComponent } from './yes-movies/yes-movies.component';
 
-import { MoviesComponent } from './movies/movies.component';
-import { MovieCreateComponent } from './create-movie/create-movie.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
 
 import { FormsModule } from '@angular/forms';
 import { MovieShowComponent } from './movie-show/movie-show.component';
@@ -24,7 +24,7 @@ import { RatingsComponent } from './components/ratings/ratings.component';
     YesMoviesComponent,
 
     MoviesComponent,
-    MovieCreateComponent,
+    CreateMovieComponent,
     MovieShowComponent,
 
     YesProfileListComponent,
