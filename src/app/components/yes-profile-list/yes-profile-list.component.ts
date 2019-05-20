@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../services/profile.service';
-import { YesProfile } from '../model/yes-profile';
+import { ProfileService } from 'src/app/services/profile.service';
+import { YesProfile } from 'src/app/model/yes-profile';
 
 @Component({
   selector: 'app-yes-profile-list',
