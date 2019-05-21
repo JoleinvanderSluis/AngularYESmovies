@@ -26,10 +26,6 @@ const routes: Routes = [
     path: 'ratings',
     component: RatingsComponent
   },
-  {
-    path: '',
-    component: MoviesComponent
-  },
 ];
 
 @NgModule({
