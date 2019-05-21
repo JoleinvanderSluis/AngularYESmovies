@@ -1,31 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Movie } from '../model/movie';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
-  constructor(private httpClient: HttpClient) { }
-
-  private url: string = "http://localhost:4200";
+  private url: string = "http://localhost:8080/api";
   private endpoint: string = "movies";
 
-  create(movie: Movie): Observable<Movie>{
-    console.log("In movie service create" + movie)
-    let resultFromService: Observable<Movie> = this.httpClient.post<Movie>(`${this.url}/${this.endpoint}`, movie);
-    return resultFromService;
+  constructor(private httpClient: HttpClient) {
   }
-  
-  getMovieList(): Observable<Movie[]> {
-    return this.httpClient.get<Movie[]>(`${this.url}/${this.endpoint}`); // returns an Observable of type Movie
+
+  createMovie(movie: Movie){
+    console.log("In movie service createMovie" + movie);
+    return this.httpClient.post(`${this.url}/${this.endpoint}`, movie);
   }
-  
-  getMovieById(id: Number): Observable<Movie> {
-    return this.httpClient.get<Movie>(`${this.url}/${this.endpoint}/${id}`);
+
+  getMovieList(){
+    console.log("In movie service getMovieList")
+    return this.httpClient.get(`${this.url}/${this.endpoint}`);
   }
 }
-
