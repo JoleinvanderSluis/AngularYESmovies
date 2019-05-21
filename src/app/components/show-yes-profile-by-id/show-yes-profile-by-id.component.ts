@@ -10,7 +10,6 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ShowYesProfileByIdComponent implements OnInit {
 
-  myYesProfile = new YesProfile
   private yesProfile
 
   constructor(

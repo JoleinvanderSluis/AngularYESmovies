@@ -10,6 +10,11 @@ export class ProfileService {
 
   constructor(private httpClient: HttpClient) { }
 
+  createYesProfile( yesProfile: YesProfile){
+    console.log("In createYesProfile" + yesProfile)
+    return this.httpClient.post('http://localhost:8080/api/yesProfiles',yesProfile);
+  }
+
   getYesProfileList() {
     return this.httpClient.get('http://localhost:8080/api/yesProfiles');
   }

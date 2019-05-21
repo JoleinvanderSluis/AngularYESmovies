@@ -9,6 +9,7 @@ import { YesProfile } from 'src/app/model/yes-profile';
 })
 export class YesProfileListComponent implements OnInit {
 
+  myYesProfile = new YesProfile()
   yesProfiles
 
   constructor(private profileService: ProfileService) { }
@@ -19,8 +20,12 @@ export class YesProfileListComponent implements OnInit {
     })
   }
 
-  getAll(){
+  getYesProfileList(){
     this.profileService.getYesProfileList().subscribe(yesProfiles => this.yesProfiles = yesProfiles)
+  }
+
+  onKlik(){
+    this.profileService.createYesProfile(this.myYesProfile).subscribe(()=>this.getYesProfileList())
   }
 
 }
