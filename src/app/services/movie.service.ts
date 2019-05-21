@@ -8,23 +8,23 @@ import { Movie } from '../model/movie';
   providedIn: 'root'
 })
 export class MovieService {
-  private url: string = "http://localhost:4200";
-
-  private endpoint: string = "movies";
 
   constructor(private httpClient: HttpClient) { }
-  
-  list(): Observable<Movie[]> {
-    return this.httpClient.get<Movie[]>(`${this.url}/${this.endpoint}`); // returns an Observable of type Movie
-  }
-  
+
+  private url: string = "http://localhost:4200";
+  private endpoint: string = "movies";
+
   create(movie: Movie): Observable<Movie>{
+    console.log("In movie service create" + movie)
     let resultFromService: Observable<Movie> = this.httpClient.post<Movie>(`${this.url}/${this.endpoint}`, movie);
-    
     return resultFromService;
   }
   
-  findById(id: Number): Observable<Movie> {
+  getMovieList(): Observable<Movie[]> {
+    return this.httpClient.get<Movie[]>(`${this.url}/${this.endpoint}`); // returns an Observable of type Movie
+  }
+  
+  getMovieById(id: Number): Observable<Movie> {
     return this.httpClient.get<Movie>(`${this.url}/${this.endpoint}/${id}`);
   }
 }

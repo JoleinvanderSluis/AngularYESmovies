@@ -1,6 +1,16 @@
 <div>
   List of Genres:
   <ul>
-      <li *ngFor="let genre of genres">id: {{ genre.id }} has name: {{ genre.name }}</li>
+      <li *ngFor="let genre of genreList">
+         id: {{ genre.id }} genre: {{ genre.name }}
+      </li>
   </ul>
+
+
+
+<input type="text" [(ngModel)]="myGenre.name" placeholder="i.e Horror">
+<button (click)="onKlik()">add genre to database</button>
+
 </div>
+
+

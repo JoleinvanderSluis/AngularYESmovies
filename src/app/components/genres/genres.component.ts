@@ -9,13 +9,23 @@ import { GenreService } from 'src/app/services/genre.service';
 })
 export class GenresComponent implements OnInit {
 
-  private genre: Genre[];
+  myGenre = new Genre()
+  genreList
 
   constructor(private genreService: GenreService) { }
 
   ngOnInit() {
-    this.genreService.list().subscribe(data => {
-      this.genre = data;
-    })
+      this.getGenreList()
   }
+
+  getGenreList(){
+    this.genreService.getGenreList().subscribe(genreList => this.genreList = genreList)
+  }
+
+  onKlik(){
+    this.genreService.createGenre(this.myGenre).subscribe(() =>
+      this.getGenreList()
+    );
+  }
+
 }
