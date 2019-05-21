@@ -15,16 +15,11 @@ export class GenreService {
 
   createGenre(genre: Genre){
     console.log("In genre service createGenre" + genre);
-    this.httpClient.post(`${this.url}/${this.endpoint}`,genre);
+    return this.httpClient.post(`${this.url}/${this.endpoint}`,genre);
   }
 
   getGenreList(){
     console.log("In genre service getGenreList")
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
-  }
-
-  getGenreById(id: Number){
-    console.log("In genre service getGenreById")
-    return this.httpClient.get(`${this.url}/${this.endpoint}/${id}`);
   }
 }

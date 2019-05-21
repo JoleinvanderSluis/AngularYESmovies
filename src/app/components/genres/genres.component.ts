@@ -9,6 +9,7 @@ import { GenreService } from 'src/app/services/genre.service';
 })
 export class GenresComponent implements OnInit {
 
+  myGenre = new Genre()
   genreList
 
   constructor(private genreService: GenreService) { }
@@ -21,5 +22,10 @@ export class GenresComponent implements OnInit {
     this.genreService.getGenreList().subscribe(genreList => this.genreList = genreList)
   }
 
+  onKlik(){
+    this.genreService.createGenre(this.myGenre).subscribe(() =>
+      this.getGenreList()
+    );
+  }
 
 }
