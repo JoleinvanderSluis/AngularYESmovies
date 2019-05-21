@@ -5,6 +5,7 @@ import { ShowYesProfileByIdComponent } from './components/show-yes-profile-by-id
 import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { MoviesComponent } from './components/movies/movies.component';
+
 const routes: Routes = [
   {
     path: 'movies',
