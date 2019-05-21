@@ -1,6 +1,19 @@
 <div>
-  List of movies:
-  <ul>
-    <li *ngFor="let movie of movies">id: {{ movie.id }} has title: {{ movie.title }} has releaseYear: {{ movie.releaseYear }}</li>
-  </ul>
-</div>
+    List of Movies:
+    <ul>
+        <li *ngFor="let movie of movieList">
+           id: {{ movie.id }} title: {{ movie.title }} IMDB rating: {{movie.imdbRating}}
+        </li>
+    </ul>
+  
+  
+  
+  <input type="text" [(ngModel)]="myMovie.title" placeholder="i.e The Lion King">
+  <input type="text" [(ngModel)]="myMovie.imdbRating" placeholder="i.e 8.5">
+  <input type="text" [(ngModel)]="myMovie.releaseYear" placeholder="i.e 1994">
+  <button (click)="onKlik()">add movie to database</button>
+  
+  </div>
+
+  <!--{{myMovie| json}}-->
+  
