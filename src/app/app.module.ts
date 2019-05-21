@@ -15,6 +15,7 @@ import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

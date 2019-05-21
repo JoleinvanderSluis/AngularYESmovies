@@ -10,11 +10,16 @@ export class ProfileService {
 
   constructor(private httpClient: HttpClient) { }
 
-  list(): Observable<YesProfile[]> {
-    return this.httpClient.get<YesProfile[]>('http://localhost:8080/api/yesProfiles');
+  createYesProfile( yesProfile: YesProfile){
+    console.log("In createYesProfile" + yesProfile)
+    return this.httpClient.post('http://localhost:8080/api/yesProfiles',yesProfile);
   }
 
-  findById(id: Number): Observable<YesProfile> {
-    return this.httpClient.get<YesProfile>('http://localhost:8080/api/yesProfiles/${id}');
+  getYesProfileList() {
+    return this.httpClient.get('http://localhost:8080/api/yesProfiles');
+  }
+
+  findYesProfileById(id: Number){
+    return this.httpClient.get('http://localhost:8080/api/yesProfiles/${id}');
   } 
 }
