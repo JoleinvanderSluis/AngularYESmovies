@@ -9,14 +9,18 @@ import { YesProfile } from 'src/app/model/yes-profile';
 })
 export class YesProfileListComponent implements OnInit {
 
-  private yesProfiles: YesProfile[];
+  yesProfiles
 
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
-    this.profileService.list().subscribe(data => {
+    this.profileService.getYesProfileList().subscribe(data => {
       this.yesProfiles = data;
     })
+  }
+
+  getAll(){
+    this.profileService.getYesProfileList().subscribe(yesProfiles => this.yesProfiles = yesProfiles)
   }
 
 }

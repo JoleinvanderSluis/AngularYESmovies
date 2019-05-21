@@ -10,7 +10,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ShowYesProfileByIdComponent implements OnInit {
 
-  private yesProfile: YesProfile;
+  myYesProfile = new YesProfile
+  private yesProfile
 
   constructor(
     private profileService: ProfileService,
@@ -20,7 +21,7 @@ export class ShowYesProfileByIdComponent implements OnInit {
   ngOnInit() : void {
     const id = +this.route.snapshot.params["id"];
 
-    this.profileService.findById(id).subscribe( yesProfile => {
+    this.profileService.findYesProfileById(id).subscribe( yesProfile => {
       this.yesProfile = yesProfile;
     })
   }
