@@ -9,15 +9,15 @@ import { RatingService } from 'src/app/services/rating.service';
 })
 export class RatingsComponent implements OnInit {
 
-  private ratings: Rating[];
+  movieID
+  yesProfileID
+  myRating = new Rating()
 
   constructor(private ratingService: RatingService) { }
 
-  ngOnInit() {
-    this.ratingService.list().subscribe(data =>{
-      this.ratings = data;
-    })
+  ngOnInit() {  }
+
+  onKlik(){
+    this.ratingService.createRating(this.movieID, this.yesProfileID, this.myRating).subscribe();
   }
-
 }
-
