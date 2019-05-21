@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Genre } from '../model/genre';
 
 @Injectable({
@@ -14,11 +13,18 @@ export class GenreService {
   constructor(private httpClient: HttpClient) {
   }
 
-  list(): Observable<Genre[]> {
-    return this.httpClient.get<Genre[]>(`${this.url}/${this.endpoint}`);
+  createGenre(genre: Genre){
+    console.log("In genre service createGenre" + genre);
+    this.httpClient.post(`${this.url}/${this.endpoint}`,genre);
   }
 
-  findById(id: Number): Observable<Genre[]> {
-    return this.httpClient.get<Genre[]>(`${this.url}/${this.endpoint}/${id}`);
+  getGenreList(){
+    console.log("In genre service getGenreList")
+    return this.httpClient.get(`${this.url}/${this.endpoint}`);
+  }
+
+  getGenreById(id: Number){
+    console.log("In genre service getGenreById")
+    return this.httpClient.get(`${this.url}/${this.endpoint}/${id}`);
   }
 }
