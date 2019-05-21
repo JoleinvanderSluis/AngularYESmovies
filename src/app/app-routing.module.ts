@@ -5,8 +5,6 @@ import { ShowYesProfileByIdComponent } from './components/show-yes-profile-by-id
 import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { MoviesComponent } from './components/movies/movies.component';
-import { CreateMovieComponent} from './create-movie/create-movie.component';
-import { MovieShowComponent } from './movie-show/movie-show.component';
 
 const routes: Routes = [
   {
@@ -30,17 +28,10 @@ const routes: Routes = [
     component: RatingsComponent
   },
   {
-    path: 'movies/create',
-    component: CreateMovieComponent
-  },
-  {
     path: '',
     component: MoviesComponent
   },
-  {
-    path: 'movies/:id',
-    component: MovieShowComponent
-  }
+  
 ];
 
 @NgModule({
