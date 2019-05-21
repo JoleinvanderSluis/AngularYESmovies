@@ -1,7 +1,7 @@
 export class Movie {
-    id: Number;
+    id: number;
     title: string;
-    releaseYear: Number;
+    releaseYear: number;
     // meanYesRating: Number;
     // nrRatings: Number;
     // imdbRating: Number;
