@@ -13,6 +13,7 @@ import { YesProfileListComponent } from './components/yes-profile-list/yes-profi
 import { ShowYesProfileByIdComponent } from './components/show-yes-profile-by-id/show-yes-profile-by-id.component';
 import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -26,7 +27,8 @@ import { RatingsComponent } from './components/ratings/ratings.component';
     YesProfileListComponent,
     ShowYesProfileByIdComponent,
     GenresComponent,
-    RatingsComponent
+    RatingsComponent,
+    HomeComponent
 
   ],
   imports: [
