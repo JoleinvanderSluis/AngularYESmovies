@@ -16,10 +16,18 @@
         </button>
       </div>
       <div class="modal-body">
-  
-          <input type="text" [(ngModel)]="movieID" placeholder="Movie ID (what movie are you rating?)">
-          <input type="text" [(ngModel)]="yesProfileID" placeholder="Username ID (who is rating this movie?)">
-          <input type="text" [(ngModel)]="myRating.yesRating" placeholder="rating between 0.0 and 10.0">
+
+          <h6>Movie ID</h6>
+          <input type="text" [(ngModel)]="movieID" placeholder="">
+          <br><br>
+
+          <h6>Username ID</h6>
+          <input type="text" [(ngModel)]="yesProfileID" placeholder="">
+          <br><br>
+
+          <h6>How would you rate this Movie?</h6>
+          <h5>please enter a number between 0.0 and 10.0</h5>
+          <input type="text" [(ngModel)]="myRating.yesRating" placeholder="">
 
       </div>
       <div class="modal-footer">

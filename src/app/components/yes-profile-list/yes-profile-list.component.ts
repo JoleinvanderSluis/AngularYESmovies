@@ -11,6 +11,8 @@ export class YesProfileListComponent implements OnInit {
 
   myYesProfile = new YesProfile()
   yesProfiles
+  favouriteGenreId
+  yesProfileId
 
   constructor(private profileService: ProfileService) { }
 
@@ -28,4 +30,10 @@ export class YesProfileListComponent implements OnInit {
     this.profileService.createYesProfile(this.myYesProfile).subscribe(()=>this.getYesProfileList())
   }
 
+  onKlikAddGenre(){
+    this.profileService.addFavouriteGenre(this.yesProfileId, this.favouriteGenreId).subscribe()
+  }
+
 }
+
+
