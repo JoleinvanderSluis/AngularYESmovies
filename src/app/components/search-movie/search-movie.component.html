@@ -1,0 +1,22 @@
+
+<br>
+<form class="form-inline my-2 my-lg-0">
+  <input name="inputText" class="form-control mr-sm-2" [(ngModel)]="inputText"  type="search" placeholder="Search movie" aria-label="Search" (ngModelChange)="getMovies()">
+</form>
+<br>
+
+<div>
+  <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Release year</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let movie of foundMovies">
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.releaseYear }}</td>
+      </tbody>
+  </table>
+</div>  
