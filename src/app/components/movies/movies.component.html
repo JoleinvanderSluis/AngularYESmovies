@@ -23,25 +23,14 @@
         <tr *ngFor="let movie of movieList">
           <td>{{ movie.id }}</td>
           <td>{{ movie.title }}</td>
-          <td>
-            <div *ngFor="let movie of movieList ">
-              {{ movie.releaseYear }}
-            </div>
-          </td>
-          <td>
-            <div *ngFor="let movie of movieList ">
-              {{ movie.meanYesRating }}
-            </div>
-          </td>
-          <td>
-              <div *ngFor="let movie of movieList ">
-                {{ movie.imdbRating }}
-              </div>
-            </td>
+          <td>{{ movie.releaseYear }}</td>
+          <td>{{ movie.meanYesRating }}</td>
+          <td>{{ movie.imdbRating }}</td>
           <td> <button type="button" class="btn btn-light btn-sm btn-outline-secondary" data-container="body" 
-                        data-toggle="popover" data-placement="left" data-content="sfhaskdfhaslkfhslfjl">
-                ?
-               </button> </td></tr>
+                        data-toggle="popover" data-placement="left" data-content="not a usefull button, sorry">
+                ?</button> 
+          </td>
+        </tr>
         </tbody>
     </table>
   
