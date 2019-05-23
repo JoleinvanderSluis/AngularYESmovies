@@ -15,7 +15,7 @@ import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
-
+import { RecommendMovieComponent } from './components/recommend-movie/recommend-movie.component';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import { SearchMovieComponent } from './components/search-movie/search-movie.com
     GenresComponent,
     RatingsComponent,
     HomeComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    RecommendMovieComponent
 
   ],
   imports: [
