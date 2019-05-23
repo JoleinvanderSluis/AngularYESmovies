@@ -12,6 +12,8 @@ export class MoviesComponent implements OnInit {
 
   myMovie = new Movie()
   movieList
+  movieId
+  genreId
 
   constructor(private movieService: MovieService) { }
 
@@ -27,6 +29,10 @@ export class MoviesComponent implements OnInit {
     this.movieService.createMovie(this.myMovie).subscribe(() =>
       this.getMovieList()
     );
+  }
+
+  onKlikAddGenre(){
+    this.movieService.addGenre(this.movieId, this.genreId).subscribe()
   }
 
 }
