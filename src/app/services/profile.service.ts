@@ -24,6 +24,10 @@ export class ProfileService {
     return this.httpClient.put(`${this.url}/${this.endpoint}/${yesProfileId}/addPreferredGenre/${genreId}`,genreId);
   }
 
+  findYesProfileById(id: Number){
+    return this.httpClient.get('http://localhost:8080/api/yesProfiles/${id}');
+} 
+
   getYesProfileList() {
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
   }
