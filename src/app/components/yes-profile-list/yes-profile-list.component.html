@@ -4,6 +4,9 @@
           <tr>
             <th scope="col">Username</th>
             <th scope="col">ID</th>
+            <th scope="col">Watched movies</th>
+            <th scope="col">Rated movies</th>
+            <th scope="col">Preferred genres</th>
             <th scope="col">More</th>
           </tr>
         </thead>
@@ -11,6 +14,24 @@
         <tr *ngFor="let yesProfile of yesProfiles">
           <td>{{ yesProfile.userName }}</td>
           <td>{{ yesProfile.id }}</td>
+          <td>
+            <div *ngFor="let movie of yesProfile.watchedMovies ">
+              {{ movie.title }}
+            </div>
+          </td>
+          <td>
+            <div *ngFor="let movie of yesProfile.ratedMovies ">
+              {{ movie.movie.title}}
+            </div>
+          </td>
+          <!-- <td>{{ yesProfile.watchedMovies[0].title}}</td>
+
+          <td>{{ yesProfile.ratedMovies[0].movie.title }}</td> -->
+          <td>
+             <div *ngFor="let genre of yesProfile.preferredGenres " >
+                {{genre.name}} 
+             </div>
+          </td>
           <td> <button type="button" class="btn btn-light btn-sm btn-outline-secondary" data-container="body" 
                         data-toggle="popover" data-placement="left" data-content="sfhaskdfhaslkfhslfjl">
                 ?
