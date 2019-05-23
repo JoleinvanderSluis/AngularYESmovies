@@ -9,14 +9,22 @@
   <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Title</th>
           <th scope="col">Release year</th>
+          <th scope="col">YES rating</th>
+          <th scope="col">IMDBrating</th>
+
         </tr>
       </thead>
       <tbody>
       <tr *ngFor="let movie of foundMovies">
+        <td>{{ movie.id }}</td>
         <td>{{ movie.title }}</td>
         <td>{{ movie.releaseYear }}</td>
+        <td>{{ movie.meanYesRating }}</td>
+        <td>{{ movie.imdbRating }}</td>
+
       </tbody>
   </table>
 </div>  
