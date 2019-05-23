@@ -6,6 +6,7 @@ import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearchMovieComponent} from './components/search-movie/search-movie.component';
 
 const routes: Routes = [
 
@@ -33,6 +34,11 @@ const routes: Routes = [
     path: 'ratings',
     component: RatingsComponent
   },
+
+  {
+    path: 'search-movie',
+    component: SearchMovieComponent
+  }
 ];
 
 @NgModule({

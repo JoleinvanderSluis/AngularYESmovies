@@ -19,12 +19,18 @@ export class MovieService {
   }
 
   getMovieList(){
-    console.log("In movie service getMovieList")
+    console.log("In movie service getMovieList");
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
   }
 
   addGenre(movieId: number, genreId: number){
     console.log("In movie service addGenre" + genreId)
     return this.httpClient.put(`${this.url}/${this.endpoint}/${movieId}/addgenre/${genreId}`,genreId);
+  }
+
+  searchMovies(inputText: string){
+    console.log("In movie service searchMovies");
+    return this.httpClient.get(`${this.url}/${this.endpoint}/searchMovies/${inputText}`);
+
   }
 }

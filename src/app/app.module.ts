@@ -14,6 +14,7 @@ import { ShowYesProfileByIdComponent } from './components/show-yes-profile-by-id
 import { GenresComponent } from './components/genres/genres.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 
 
 
@@ -28,7 +29,8 @@ import { HomeComponent } from './components/home/home.component';
     ShowYesProfileByIdComponent,
     GenresComponent,
     RatingsComponent,
-    HomeComponent
+    HomeComponent,
+    SearchMovieComponent
 
   ],
   imports: [

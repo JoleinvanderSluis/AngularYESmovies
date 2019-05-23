@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { YesProfile } from '../model/yes-profile';
-import { Genre } from '../model/genre';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +24,7 @@ export class ProfileService {
 
   findYesProfileById(id: Number){
     return this.httpClient.get('http://localhost:8080/api/yesProfiles/${id}');
-} 
+  } 
 
   getYesProfileList() {
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
