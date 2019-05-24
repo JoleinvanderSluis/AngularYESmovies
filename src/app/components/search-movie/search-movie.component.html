@@ -11,6 +11,7 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Title</th>
+          <th scope="col">Genres</th>
           <th scope="col">Release year</th>
           <th scope="col">YES rating</th>
           <th scope="col">IMDBrating</th>
@@ -21,10 +22,15 @@
       <tr *ngFor="let movie of foundMovies">
         <td>{{ movie.id }}</td>
         <td>{{ movie.title }}</td>
+        <td>
+          <div *ngFor="let genre of movie.genresOfMovie ">
+            {{ genre.name }} 
+         </div>
+          </td>
         <td>{{ movie.releaseYear }}</td>
         <td>{{ movie.meanYesRating }}</td>
         <td>{{ movie.imdbRating }}</td>
-
+</tr>
       </tbody>
   </table>
 </div>  
